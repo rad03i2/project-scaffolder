@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "project-scaffolder"
+version = "1.0.0"
+description = "A safe, dependency-free CLI for generating practical Python and static web project foundations."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Radwan Abdulhadi Ahmed"}]
+keywords = ["scaffolding", "project-generator", "cli", "python", "web"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent"]
+
+[project.scripts]
+project-scaffolder = "project_scaffolder.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/project_scaffolder"]
